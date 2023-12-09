@@ -3,6 +3,7 @@ import Link from 'next/link';
 import React from 'react';
 import Image from 'next/image';
 
+
 const CategoryPage = () => {
     return (
         <div className='p-4 h-[calc(100vh-rem)] md:h-[calc(100vh-10rem)] flex flex-wrap sm:flex-row text-red-500'>
@@ -26,5 +27,13 @@ const CategoryPage = () => {
         </div>
     );
 };
+export function generateStaticParams() {
+    return [{ category: '1' }, { category: '2' }, { category: '3' }]
+  }
+   
+ 
 
-export default CategoryPage 
+ 
+  export default CategoryPage
+  
+  

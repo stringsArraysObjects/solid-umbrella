@@ -3,6 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import Price from '@/components/Price';
 
+
 const SingleProductPage = () => {
     return (
         <div className='p-4 lg:px-20 xl-px-40 h-screen flex flex-col justify-around
@@ -28,5 +29,12 @@ const SingleProductPage = () => {
         </div>
     )
 }
+export function generateStaticParams() {
+    return [{ id: '1' }, { id: '2' }, { id: '3' }]
+  }
+   
+  
+
+
 
 export default SingleProductPage 
