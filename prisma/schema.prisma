@@ -21,15 +21,24 @@ model Category{
   products Product[]
 }
 
-model Category{
+model Product{
   id String @id @default(cuid())
   createAt DateTime @default(now())
   title String
   desc String
-  img String
+  img String?
   price Decimal
   isFeatured Boolean @default false
   optins Json[]
   category Category @relation(fields: [catSlug], reference: [slug])
   catSlug String
+}
+
+model Order {
+  id String @id @default(cuid())
+  createAt DateTime @default(now())
+  price Decimal
+  price Decimal
+  products Json[]
+  intent_id String? @unique
 }
