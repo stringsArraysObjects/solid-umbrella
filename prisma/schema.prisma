@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -17,8 +14,8 @@ model Category{
   desc String
   color String
   img String
-  slud String @unique
-  products Product[]
+  slug String @unique
+  product Product[]
 }
 
 model Product{
@@ -27,10 +24,10 @@ model Product{
   title String
   desc String
   img String?
-  price Decimal
-  isFeatured Boolean @default false
-  optins Json[]
-  category Category @relation(fields: [catSlug], reference: [slug])
+  price Decimal  
+  isFeatured Boolean @default(false)
+  options Json[]
+  category Category @relation(fields: [catSlug], references: [slug])
   catSlug String
 }
 
@@ -38,7 +35,7 @@ model Order {
   id String @id @default(cuid())
   createAt DateTime @default(now())
   price Decimal
-  price Decimal
+  status String
   products Json[]
   intent_id String? @unique
 }
