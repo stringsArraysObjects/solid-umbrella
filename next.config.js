@@ -1,10 +1,10 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+// /** @type {import('next').NextConfig} */
+// const nextConfig = {
    
 
-}
+// }
 
-module.exports = nextConfig
+// module.exports = nextConfig
 
 // const isProd = process.env.NODE_ENV === 'production'
 // module.exports = {
@@ -20,5 +20,14 @@ module.exports = nextConfig
 //     ]
 //   },
 // }
-
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export',
+  images: {
+    loader: 'custom',
+    loaderFile: './my-loader.ts',
+  },
+}
+ 
+module.exports = nextConfig
   
