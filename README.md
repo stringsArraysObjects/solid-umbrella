@@ -1,2 +1,2 @@
-# solid-umbrella
-React Next.js &amp; Tailwind | Responsive food ordering app
+
+Generic pizza restaurant ordering app | using React, Next.js, Tailwind
